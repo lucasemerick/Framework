@@ -27,12 +27,12 @@
                         <li><a href="<?= base_url(); ?>">Início</a></li>                        
                         <li><a href="<?= base_url('enderecos'); ?>">Endereços</a></li>                        
                         <li><a href="<?= base_url('cargos'); ?>">Cargos</a></li>                        
-                        <li><a href="#">Funcionários</a></li>                        
-                        <li><a href="#">Clientes</a></li>                        
-                        <li><a href="#">Pedidos</a></li>                        
-                        <li><a href="#">Categorias</a></li>                        
-                        <li><a href="#">Fornecedores</a></li>                        
-                        <li><a href="#">Produtos</a></li>  
+                        <li><a href="<?= base_url('funcionarios'); ?>">Funcionários</a></li>                        
+                        <li><a href="<?= base_url('clientes'); ?>">Clientes</a></li>                        
+                        <li><a href="<?= base_url('pedidos'); ?>">Pedidos</a></li>                        
+                        <li><a href="<?= base_url('categorias'); ?>">Categorias</a></li>                        
+                        <li><a href="<?= base_url('fornecedores'); ?>">Fornecedores</a></li>                        
+                        <li><a href="<?= base_url('produtos'); ?>">Produtos</a></li>  
                         <li style="margin: 10px 5px 0 0">
                             <div class="dropdown">
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
