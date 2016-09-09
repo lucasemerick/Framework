@@ -8,7 +8,11 @@ class Usuarios extends Controller {
     }
 
     public function index() {
-        $this->render('usuarios/index');
+        $func = new Cliente();
+        $func->getById(1);
+        $func->recursiveGet();
+
+        print_r($func);
     }
 
     public function add() {
