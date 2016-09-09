@@ -81,7 +81,7 @@ class Model {
                 $obj->recursiveGet(); # Verifica e carrega os relacionamento do novo objeto.
                 $this->$name = $obj; # Seta o Objeto como variável
                 #	OU
-                #this->$name = $obj->to_array(); //para trazer apenas o array;
+                #$this->$name = $obj->to_array(); //para trazer apenas o array;
             }
         }
 
