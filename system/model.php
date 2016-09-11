@@ -3,7 +3,7 @@
 class Model {
 #Variáveis para configuração da conexão ao Banco de Dados.
 
-    private $db_host = 'localhost'; #Normalmente 'localhost' ou '127.0.0.1'	
+    private $db_host = 'localhost'; #Normalmente 'localhost' ou '127.0.0.1'
     private $db_name = 'framework'; #Seleciona o banco a ser utilizado.
     private $db_user = 'root'; #Usuário do banco.
     private $db_pass = ''; #Senha do usuário.
