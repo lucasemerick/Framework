@@ -17,7 +17,7 @@ class Controller {
     }
 
     /* EXAMPLE:
-      /	Em qualquer controller chamar:
+      /	Pra Em qualquer controller chamar:
       /	$this->render('alguma-view');
       /	OU
       /	$this->render('algum-subdiretorio/alguma-view');
@@ -30,7 +30,7 @@ class Controller {
     }
 
     /* EXAMPLE
-      /	para capturar os valores POST de algum formulario:
+      /	Para capturar os valores POST de algum formulario:
       /	$arr = $this->post_to_array(array('descricao','quantidade','valor'))
      */
 
@@ -43,7 +43,7 @@ class Controller {
     }
 
     /* EXAMPLE
-      /	para capturar os valores POST e adicionar diretamente ao objeto.
+      /	Para capturar os valores POST e adicionar diretamente ao objeto.
       /	$obj = $this->post_to_obj(array('descricao','quantidade','valor'), new Produto());
      */
 
