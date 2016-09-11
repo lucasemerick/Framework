@@ -16,11 +16,11 @@ class Model {
     private $order_by = '';
     private $limit = '';
     private $offset = '';
-    private $query; #armazena a query executada.
-    private $result; #resultado de dados encontrado pela query.
-    protected $one_to_one; # um para um
-    protected $one_to_many; # um para muitos
-    protected $many_to_many; # muitos para muitos
+    private $query; #Armazena a query executada.
+    private $result; #Resultado de dados encontrado pela query.
+    protected $one_to_one; # Um para um
+    protected $one_to_many; # Um para muitos
+    protected $many_to_many; # Muitos para muitos
 
     #Através do construtor inicializaremos a conexão
 
