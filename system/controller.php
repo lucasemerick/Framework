@@ -17,7 +17,7 @@ class Controller {
     }
 
     /* EXAMPLE:
-      /	Em qualquer controller chamar:
+      /	Pra em qualquer controller chamar:
       /	$this->render('alguma-view');
       /	OU
       /	$this->render('algum-subdiretorio/alguma-view');
