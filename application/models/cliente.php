@@ -69,7 +69,7 @@ class Cliente extends Model {
     }
 
     public function pesquisar($valor) {
-        $obj = array('id', 'nome', 'cpf', 'telefone', 'renda', 'data_cadastro', 'endereco_id');
+        $obj = array('id', 'nome', 'cpf', 'telefone', 'renda', 'data_cadastro');
         $dados = '';
         for ($indice = 0; $indice < 6; $indice++) {
             $cliente = new Cliente();

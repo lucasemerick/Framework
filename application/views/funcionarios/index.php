@@ -2,12 +2,12 @@
 
     <div id="top" class="row">
         <div class="col-sm-3">
-            <h2>Categorias</h2>
+            <h2>Funcionários</h2>
         </div>
         <div class="col-sm-6">
-            <form action="<?= base_url('categorias/pesquisar') ?>" method="post">
+            <form action="<?= base_url('funcionarios/pesquisar') ?>" method="post">
                 <div class="input-group h2">
-                    <input name="valor" class="form-control" id="search" type="text" placeholder="Pesquisar categorias">
+                    <input name="valor" class="form-control" id="search" type="text" placeholder="Pesquisar funcionários">
                     <span class="input-group-btn">
                         <button class="btn btn-primary" type="submit">
                             <span class="glyphicon glyphicon-search"></span>
@@ -17,7 +17,7 @@
             </form>
         </div>
         <div class="col-sm-3">
-            <a href="<?= base_url('categorias/add') ?>" class="btn btn-primary pull-right h2">Novo</a>
+            <a href="<?= base_url('funcionarios/add') ?>" class="btn btn-primary pull-right h2">Novo</a>
         </div>
     </div> <!-- /#top -->
 
@@ -28,21 +28,27 @@
             <table class="table table-striped" cellspacing="0" cellpadding="0">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Nome</th>
+                        <th>Entrada</th>
+                        <th>Telefone</th>
                         <th class="actions">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    if (!empty($categorias)) {
-                        foreach ($categorias as $categoria) {
+                    if (!empty($funcionarios)) {
+                        foreach ($funcionarios as $funcionario) {
                             ?>
                             <tr>
-                                <td><?= $categoria['nome'] ?></td>
+                                <td><?= $funcionario['id'] ?></td>
+                                <td><?= $funcionario['nome'] ?></td>
+                                <td><?= $funcionario['entrada'] ?></td>
+                                <td><?= $funcionario['telefone'] ?></td>
                                 <td class='actions'>
-                                    <a class='btn btn-success btn-xs' href='<?= base_url("categorias/ler/id/{$categoria['id']}") ?>'>Visualizar</a>
-                                    <a class='btn btn-warning btn-xs' href='<?= base_url("categorias/editar/read/id/{$categoria['id']}") ?>'>Editar</a>
-                                    <a class='btn btn-danger btn-xs'  href='<?= base_url("categorias/excluir/id/{$categoria['id']}") ?>' onclick=" return confirm('Deseja realmente excluir o cargo?')">Excluir</a>
+                                    <a class='btn btn-success btn-xs' href='<?= base_url("funcionarios/ler/id/{$funcionario['id']}") ?>'>Visualizar</a>
+                                    <a class='btn btn-warning btn-xs' href='<?= base_url("funcionarios/editar/read/id/{$funcionario['id']}") ?>'>Editar</a>
+                                    <a class='btn btn-danger btn-xs'  href='<?= base_url("funcionarios/excluir/id/{$funcionario['id']}") ?>' onclick=" return confirm('Deseja realmente excluir o funcionário?')">Excluir</a>
                                 </td>
                             </tr>
                             <?php

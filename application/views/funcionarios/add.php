@@ -1,30 +1,30 @@
 <div id="main" class="container-fluid">
 
-    <h3 class="page-header">Adicionar Cliente</h3>
+    <h3 class="page-header">Adicionar Funcionário</h3>
 
-    <form action="<?= base_url('clientes/add/new') ?>" method="post">
+    <form action="<?= base_url('funcionarios/add/new') ?>" method="post">
         <div class="row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
                 <label for="exampleInputEmail1">Nome</label>
-                <input type="nome" class="form-control" id="exampleInputEmail1" name="nome">
+                <input type="text" class="form-control" id="exampleInputEmail1" name="nome">
             </div>
-            <div class="form-group col-md-2">
-                <label for="exampleInputEmail1">CPF</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name="cpf">
+            <div class="form-group col-md-3">
+                <label for="exampleInputEmail1">Entrada</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="entrada">
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label for="exampleInputEmail1">Telefone</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" name="telefone">
             </div>
-            <div class="form-group col-md-2">
-                <label for="exampleInputEmail1">Renda</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name="renda">
+             <div class="form-group col-md-3">
+                <label>Cargo</label>
+                <select class="form-control" name="cargo_id">
+                    <option value="nada"></option>
+                    <?php foreach ($cargos as $cargo) { ?>
+                        <option value="<?= $cargo['id'] ?>"><?= $cargo['descricao'] . ', ' . $cargo['salario'] ?></option>
+                    <?php } ?>
+                </select>
             </div>
-            <div class="form-group col-md-2">
-                <label for="exampleInputEmail1">Data de cadastro</label>
-                <input type="date" class="form-control" id="exampleInputEmail1" name="data_cadastro">
-            </div>
-            </br>
             <div class="form-group col-md-6">
                 <label>Endereço</label>
                 <?php foreach ($enderecos as $endereco) { ?>
@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary">Salvar</button>
-                <a href="<?= base_url('clientes/index') ?>" class="btn btn-default">Cancelar</a>
+                <a href="<?= base_url('funcionarios/index') ?>" class="btn btn-default">Cancelar</a>
             </div>
         </div>
 

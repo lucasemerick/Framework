@@ -1,6 +1,6 @@
 <div id="main" class="container-fluid">
 
-    <h3 class="page-header">Visualizar Cliente</h3>
+    <h3 class="page-header">Visualizar Fornecedor</h3>
 
     <div class="row">
         <div class="form-group col-md-4">
@@ -33,7 +33,7 @@
     <hr />
     <div class="row">
         <div class="col-md-12">
-            <a href="<?= base_url('clientes/index') ?>" class="btn btn-default">Voltar</a>
+            <a href="<?= base_url('fornecedores/index') ?>" class="btn btn-default">Voltar</a>
         </div>
     </div>
 </div>

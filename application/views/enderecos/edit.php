@@ -1,6 +1,6 @@
 <div id="main" class="container-fluid">
 
-    <h3 class="page-header">Visualizar Endereço</h3>
+    <h3 class="page-header">Editar Endereço</h3>
     <form action="<?= base_url('enderecos/editar/save/id/') . $endereco['id'] ?>" method="post">
         <div class="row">
             <div class="form-group col-md-3">

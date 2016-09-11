@@ -2,12 +2,12 @@
 
     <div id="top" class="row">
         <div class="col-sm-3">
-            <h2>Categorias</h2>
+            <h2>Produtos</h2>
         </div>
         <div class="col-sm-6">
-            <form action="<?= base_url('categorias/pesquisar') ?>" method="post">
+            <form action="<?= base_url('produtos/pesquisar') ?>" method="post">
                 <div class="input-group h2">
-                    <input name="valor" class="form-control" id="search" type="text" placeholder="Pesquisar categorias">
+                    <input name="valor" class="form-control" id="search" type="text" placeholder="Pesquisar produtos">
                     <span class="input-group-btn">
                         <button class="btn btn-primary" type="submit">
                             <span class="glyphicon glyphicon-search"></span>
@@ -17,7 +17,7 @@
             </form>
         </div>
         <div class="col-sm-3">
-            <a href="<?= base_url('categorias/add') ?>" class="btn btn-primary pull-right h2">Novo</a>
+            <a href="<?= base_url('produtos/add') ?>" class="btn btn-primary pull-right h2">Novo</a>
         </div>
     </div> <!-- /#top -->
 
@@ -28,21 +28,27 @@
             <table class="table table-striped" cellspacing="0" cellpadding="0">
                 <thead>
                     <tr>
-                        <th>Nome</th>
+                        <th>ID</th>
+                        <th>Descrição</th>
+                        <th>Quantidade</th>
+                        <th>Valor</th>
                         <th class="actions">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    if (!empty($categorias)) {
-                        foreach ($categorias as $categoria) {
+                    if (!empty($produtos)) {
+                        foreach ($produtos as $produto) {
                             ?>
                             <tr>
-                                <td><?= $categoria['nome'] ?></td>
+                                <td><?= $produto['id'] ?></td>
+                                <td><?= $produto['descricao'] ?></td>
+                                <td><?= $produto['quantidade'] ?></td>
+                                <td><?= $produto['valor'] ?></td>
                                 <td class='actions'>
-                                    <a class='btn btn-success btn-xs' href='<?= base_url("categorias/ler/id/{$categoria['id']}") ?>'>Visualizar</a>
-                                    <a class='btn btn-warning btn-xs' href='<?= base_url("categorias/editar/read/id/{$categoria['id']}") ?>'>Editar</a>
-                                    <a class='btn btn-danger btn-xs'  href='<?= base_url("categorias/excluir/id/{$categoria['id']}") ?>' onclick=" return confirm('Deseja realmente excluir o cargo?')">Excluir</a>
+                                    <a class='btn btn-success btn-xs' href='<?= base_url("produtos/ler/id/{$produto['id']}") ?>'>Visualizar</a>
+                                    <a class='btn btn-warning btn-xs' href='<?= base_url("produtos/editar/read/id/{$produto['id']}") ?>'>Editar</a>
+                                    <a class='btn btn-danger btn-xs'  href='<?= base_url("produtos/excluir/id/{$produto['id']}") ?>' onclick=" return confirm('Deseja realmente excluir o funcionário?')">Excluir</a>
                                 </td>
                             </tr>
                             <?php

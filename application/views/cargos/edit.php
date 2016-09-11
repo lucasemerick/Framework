@@ -4,11 +4,11 @@
     <form action="<?= base_url('cargos/editar/save/id/') . $cargo['id'] ?>" method="post">
         <div class="row">
             <div class="form-group col-md-3">
-                <label for="exampleInputEmail1">CEP</label>
+                <label for="exampleInputEmail1">Descricão</label>
                 <input type="nome" class="form-control" id="exampleInputEmail1" value="<?= $cargo['descricao'] ?>" name="descricao">
             </div>
             <div class="form-group col-md-3">
-                <label for="exampleInputEmail1">Logradouro</label>
+                <label for="exampleInputEmail1">Salário</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" value="<?= $cargo['salario'] ?>" name="salario">
             </div>
         </div>
